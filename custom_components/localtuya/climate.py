@@ -103,6 +103,16 @@ HVAC_MODE_SETS = {
         HVACMode.HEAT: "1",
         HVACMode.AUTO: "0",
     },
+    # 制冷+地冷 暂时屏蔽
+    "出风/制冷/制热/地暖/制热+地暖/关机": {
+        HVACMode.FAN_ONLY: "wind",
+        HVACMode.COOL: "cold",
+        HVACMode.HEAT: "heat",
+        HVACMode.HEAT: "floor_heat",
+        HVACMode.HEAT: "heat_floorheat",
+        # HVACMode.COOL: "cold_floorcold",
+        # HVACMode.OFF: "off",
+    },
 }
 HVAC_ACTION_SETS = {
     "True/False": {
@@ -125,6 +135,16 @@ HVAC_ACTION_SETS = {
         HVACAction.HEATING: "heating",
         HVACAction.IDLE: "warming",
     },
+    # 制冷+地冷 暂时屏蔽
+    "出风/制冷/制热/地暖/制热+地暖/关机": {
+        HVACAction.FAN: "wind",
+        HVACAction.COOLING: "cold",
+        HVACAction.HEATING: "heat",
+        HVACAction.HEATING: "floor_heat",
+        HVACAction.HEATING: "heat_floorheat",
+        # HVACAction.COOLING: "cold_floorcold",
+        HVACAction.IDLE: False,
+    },
 }
 HVAC_FAN_MODE_SETS = {
     "Auto/Low/Middle/High/Strong": {
@@ -133,6 +153,14 @@ HVAC_FAN_MODE_SETS = {
         FAN_MEDIUM: "middle",
         FAN_HIGH: "high",
         FAN_TOP: "strong",
+    },
+    # 睡眠 暂时屏蔽
+    "低速/中速/高速/强力/自动": {
+        FAN_LOW: "low",
+        FAN_MEDIUM: "middle",
+        FAN_HIGH: "high",
+        FAN_TOP: "strong",
+        FAN_AUTO: "auto",
     }
 }
 HVAC_SWING_MODE_SETS = {
